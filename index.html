@@ -507,6 +507,9 @@ if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > 
 	 $.ajax({
 		 url:'http://106.13.105.252:8080/springasync/hello',
 		 type:'get',
+		 xhrFields:{
+			 widthCredentials:true
+		 },
 		 success:function(data,status,xhr){
 			 console.log(data);
 			 console.log('=======================');
