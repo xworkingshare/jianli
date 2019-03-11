@@ -74,7 +74,7 @@
                         <a class="page-scroll" href="#contact">联系方式</a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="http://106.13.105.252:8080/" target="_blank">测试:连接百度云服务器</a>
+                        <a class="page-scroll" href="" target="_blank" id="mytest">测试:连接百度云服务器</a>
                     </li>
                 </ul>
             </div>
@@ -502,6 +502,24 @@ if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > 
     
  });
   
+ 
+ $('#mytest').on('click',function(){
+	 $.ajax({
+		 url:'http://106.13.105.252:8080/springasync/hello',
+		 type:'get',
+		 success:function(data,status.xhr){
+			 console.log(data);
+			 console.log('=======================');
+			 console.log(status);
+			 console.log('=======================');
+			 console.log(xhr);
+			 console.log('=======================');
+		 }
+	 });
+	 
+	 
+ });
+ 
 </script>
 </body>
 </html>
